@@ -1,4 +1,6 @@
-angular.module('multiCtrl', ['ngRoute']).config(['$routeProvider',
+var EM = angular.module('multiCtrl', ['ngRoute'])
+
+    EM.config(['$routeProvider',
         function($routeProvider) {
             $routeProvider
                 .when('/listUser', {
