@@ -1,6 +1,4 @@
-var multi = angular.module('multiCtrl', ['ngRoute']);
-
-multi.config(['$routeProvider',
+angular.module('multiCtrl', ['ngRoute']).config(['$routeProvider',
         function($routeProvider) {
             $routeProvider
                 .when('/listUser', {

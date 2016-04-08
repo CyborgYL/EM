@@ -1,4 +1,4 @@
-multi.controller('listCtrl',['$scope', '$timeout','userData', function($scope, $timeout, userData) {
+angular.module('multiCtrl', ['ngRoute']).controller('listCtrl',['$scope', '$timeout','userData', function($scope, $timeout, userData) {
     $scope.users = userData.list_users();
     $scope.predicate = 'id';
     $scope.reverse = true;
@@ -66,7 +66,7 @@ multi.controller('listCtrl',['$scope', '$timeout','userData', function($scope, $
     };
 }]);
 
-multi.controller('showCtrl',['$scope', '$routeParams', 'userData', function($scope, $routeParams,  userData) {
+angular.module('multiCtrl', ['ngRoute']).controller('showCtrl',['$scope', '$routeParams', 'userData', function($scope, $routeParams,  userData) {
     $scope.userId = $routeParams.userId;
     $scope.newUser = userData.getUser($routeParams.userId);
 
@@ -79,7 +79,7 @@ multi.controller('showCtrl',['$scope', '$routeParams', 'userData', function($sco
     };
 }]);
 
-multi.controller('directReportsCtrl',['$scope', '$routeParams', '$timeout', 'userData', function($scope, $routeParams, $timeout, userData) {
+angular.module('multiCtrl', ['ngRoute']).controller('directReportsCtrl',['$scope', '$routeParams', '$timeout', 'userData', function($scope, $routeParams, $timeout, userData) {
     $scope.users = userData.list_users();
     $scope.userId = $routeParams.userId;
     $scope.directReports = userData.getUser($routeParams.userId).directReports;
@@ -153,7 +153,7 @@ multi.controller('directReportsCtrl',['$scope', '$routeParams', '$timeout', 'use
 
 
 
-multi.controller('editCtrl', ['$scope', '$routeParams', 'userData', function($scope, $routeParams, userData) {
+angular.module('multiCtrl', ['ngRoute']).controller('editCtrl', ['$scope', '$routeParams', 'userData', function($scope, $routeParams, userData) {
     $scope.users = userData.list_users();
     $scope.edit = true;
     $scope.userId = $routeParams.userId;
