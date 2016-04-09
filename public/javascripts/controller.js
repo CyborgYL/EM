@@ -1,5 +1,4 @@
-EM
-    .controller('listCtrl',['$scope', '$timeout','userData', function($scope, $timeout, userData) {
+EM.controller('listCtrl',['$scope', '$timeout','userData', function($scope, $timeout, userData) {
     $scope.users = userData.list_users();
     $scope.predicate = 'id';
     $scope.reverse = true;
@@ -166,14 +165,14 @@ EM.controller('editCtrl', ['$scope', '$routeParams', 'userData', function($scope
         $scope.edit = false;
         $scope.newUser = {};
         $scope.newUser.id = null;
-		$scope.newUser.fName = "";
-		$scope.newUser.lName = "";
-		$scope.newUser.title = "";
-		$scope.newUser.age = undefined;
-		$scope.newUser.officePhone = undefined;
-		$scope.newUser.cellPhone = undefined;
-		$scope.newUser.email = undefined;
-		$scope.newUser.sex = undefined;
+        $scope.newUser.fName = "";
+        $scope.newUser.lName = "";
+        $scope.newUser.title = "";
+        $scope.newUser.age = undefined;
+        $scope.newUser.officePhone = undefined;
+        $scope.newUser.cellPhone = undefined;
+        $scope.newUser.email = undefined;
+        $scope.newUser.sex = undefined;
     }
     else {
         $scope.edit = true;
